@@ -192,11 +192,9 @@ GamerEngagementPredictor/
 ├── Gamer_behaviours_dataset.csv
 ├── requirements.txt
 ├── README.md
+│__ notebook.py
 │
-├── notebooks/
-│   └── Gamer_Engagement_Training.py
-│
-└── assets/
+
 ```
 
 ---
