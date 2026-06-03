@@ -32,6 +32,19 @@ The model analyzes player behavior and gameplay statistics to make predictions t
 
 ---
 
+## ✨ Key Features
+
+* 🎯 Single Player Engagement Prediction
+* 📂 Batch CSV Prediction
+* 👀 CSV Data Preview Before Prediction
+* 📊 Prediction Confidence Scores
+* 📈 Engagement Distribution Summary
+* ⬇ Download Predicted CSV Results
+* 🤖 Automated Feature Selection with SelectKBest
+* ⚡ Hyperparameter-Tuned Machine Learning Models
+
+---
+
 ## 📊 Dataset Features
 
 ### Numerical Features
@@ -175,10 +188,30 @@ using Joblib serialization.
 
 The trained model can:
 
-* Predict engagement level
-* Estimate class probabilities
-* Support single-player predictions
+* Predict engagement level for individual players
+* Estimate class probabilities and confidence scores
+* Support single-player predictions through an interactive interface
 * Perform batch predictions using CSV files
+* Preview uploaded CSV data before prediction
+* Generate engagement predictions for all records in the uploaded dataset
+* Display prediction summaries and engagement distribution charts
+* Export results as a downloadable CSV file with prediction columns added
+
+### 📂 Batch CSV Prediction Workflow
+
+1. Upload a CSV file containing player data.
+2. Preview the uploaded dataset inside the application.
+3. Validate required columns automatically.
+4. Run predictions for all players in the dataset.
+5. View engagement distribution and prediction summaries.
+6. Download the generated CSV file containing:
+
+   * Original player data
+   * Predicted engagement level
+   * Class probability scores (when available)
+   * Prediction confidence values
+
+This functionality allows the application to analyze large groups of players efficiently instead of predicting one player at a time.
 
 ---
 
@@ -192,9 +225,10 @@ GamerEngagementPredictor/
 ├── Gamer_behaviours_dataset.csv
 ├── requirements.txt
 ├── README.md
-│__ notebook.py
+├── notebook.py
 │
-
+└── .streamlit/
+    └── config.toml
 ```
 
 ---
@@ -219,7 +253,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Run the Streamlit app:
+Run the Streamlit application:
 
 ```bash
 streamlit run app.py
@@ -241,10 +275,11 @@ streamlit run app.py
 
 ## 🎯 Future Improvements
 
-* SHAP-based explainability
+* SHAP-based model explainability
 * Advanced feature engineering
-* Deep Learning models
-* Real-time API deployment
+* Deep Learning approaches
+* REST API deployment
+* Real-time prediction services
 * Model monitoring dashboard
 
 ---
